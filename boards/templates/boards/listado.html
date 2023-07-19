@@ -1,0 +1,41 @@
+{% extends 'boards/base.html' %}
+{% block contenido %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado</title>
+</head>
+<body>
+    <h1>Listado de Vehículos</h1>
+    <table>
+        <thead>
+    <table class="table table-striped">
+        <tr align="center">
+            <th align="center">Marca</th>
+            <th align="center">Modelo</th>
+            <th align="center">Serial Carroceria</th>
+            <th align="center">Serial Motor</th>
+            <th align="center">Categoria</th>
+            <th align="center">Precio</th>
+            <th align="center">Condicion de Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for vehiculo in vehiculos %}
+        <tr align="center">
+            <td>{{ vehiculo.title }}</td>
+            <td>{{ vehiculo.description }}</td>
+            <td>{{ vehiculo.serial }}</td>
+            <td>{{ vehiculo.serial_motor }}</td>
+            <td>{{ vehiculo.category }}</td>
+            <td>{{ vehiculo.price }}</td>
+            <td>{{ vehiculo.condicion }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock contenido %}
+
+

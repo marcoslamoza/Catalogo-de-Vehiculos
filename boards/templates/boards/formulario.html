@@ -1,0 +1,10 @@
+{% extends 'boards/base.html' %}
+
+{% block contenido %}
+<div class="row mt-3">
+    <form action="" method="POST"> 
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Agregar">
+    </form>
+{% endblock contenido %}
